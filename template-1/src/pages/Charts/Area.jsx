@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Area = () => {
-  return (
-    <div>Area</div>
-  )
-}
+const Area = () => (
+  <div>Area</div>
+);
 
-export default Area
+export default Area;
