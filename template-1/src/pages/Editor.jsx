@@ -1,12 +1,16 @@
 import React from 'react';
-// import {} from '@syncfusion/ej2-react-richtexteditor';
+import { RichTextEditorComponent, Inject, HtmlEditor, Toolbar, Image, Link, QuickToolbar } from '@syncfusion/ej2-react-richtexteditor';
 
-// import { EditorData } from '../data/dummy';
+import { EditorData } from '../data/dummy';
 import { Header } from '../components';
 
 const Editor = () => (
   <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
-    <Header category="App" title="Kanban" />
+    <Header category="App" title="Editor" />
+    <RichTextEditorComponent>
+      <EditorData />
+      <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+    </RichTextEditorComponent>
   </div>
 );
 

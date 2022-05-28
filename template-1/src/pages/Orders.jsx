@@ -15,10 +15,8 @@ const Orders = () => (
     >
       <ColumnsDirective>
         {ordersGrid.map((item, index) => (
-          <>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            <ColumnDirective key={index} {...item} />
-          </>
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <ColumnDirective key={index} {...item} />
         ))}
       </ColumnsDirective>
       <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit]} />
